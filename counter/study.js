@@ -1,29 +1,30 @@
-const value = document.querySelector("#value");
 const btns = document.querySelectorAll(".btn");
+const value = document.querySelector("#value");
 
-let count = 0;
+let count =0;
 
 btns.forEach(function(btn){
     btn.addEventListener("click", function(e){
-        const countBtn = e.target.classList;
+        const countBtn = e.currentTarget.classList;
+        console.log(countBtn);
         if(countBtn.contains("decrease")){
             count--;
         }else if(countBtn.contains("increase")){
             count++;
         }else{
-            count = 0;
-        };
-
-        if(count <= 0){
-            value.stlye.color = "red";
+            count =0;
         }
-        if(count >= 0){
-            value.stlye.color = "green";
+
+        if(count < 0){
+            value.style.color = "red";
+        }
+        if(count > 0){
+            value.style.color = "green";
         }
         if(count === 0){
-            value.stlye.color = "#222";
+            value.style.color = "#222";
         }
+
         value.textContent = count;
     })
-    
 })

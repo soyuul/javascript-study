@@ -1,14 +1,13 @@
-const simple = ["#456", "#943", "#159", "#753"];
-
-const colorText = document.querySelector(".color");
+const simple = ["red", "#753", "#357", "#456"];
+const color = document.querySelector(".color");
 const btn = document.querySelector("#btn");
 
 btn.addEventListener("click", function(){
-    const simpleColor = 1;
-    document.body.style.backgroundColor = simple[setRandomNum()];
-    colorText.textContent = simple[setRandomNum()];
-});
+  const simpleColor = colorRandom();
+  document.body.style.backgroundColor = simple[simpleColor];
+  color.textContent = simple[simpleColor];  
+})
 
-function setRandomNum(){
+function colorRandom(){
     return Math.floor(Math.random()*simple.length);
-};
+}
