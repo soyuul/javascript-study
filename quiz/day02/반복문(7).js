@@ -7,3 +7,13 @@ for(let i=0; i<10; i++){
 }
 
 document.write(a);
+
+
+// let arr = []
+
+// for(let i = 0; i < 10; i++){
+//       arr.push(i)
+// }
+
+// let result = arr.reduce((prev, cur)=> prev += cur )
+// console.log(result);
